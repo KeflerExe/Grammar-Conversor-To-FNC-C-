@@ -6,7 +6,7 @@
 ## About The Project
 
 C++ conversor that reads a .gra file containing the 
-specification of a context-independent grammar and generate another .gra file
+specification of a context-independent grammar and generates another .gra file
 which specifies an equivalent grammar (L(Gin) = L(Gout)) to the input one, but in
 this case, written in Chomsky's normal form. Before performing the conversion, you must
 check at least that the Gin input grammar does not contain unitary productions nor empty ones.
