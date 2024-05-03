@@ -1,0 +1,20 @@
+6
+a 
+b
+c
+d
+f
+g
+5
+A
+B
+C
+D
+Y
+A
+5
+A -> BCD | b
+B -> Yc | d
+C -> gA | c
+D -> dB | a
+Y -> f
