@@ -5,19 +5,32 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+C++ conversor that reads a .gra file containing the 
+specification of a context-independent grammar and generate another .gra file
+which specifies an equivalent grammar (L(Gin) = L(Gout)) to the input one, but in
+this case, written in Chomsky's normal form. Before performing the conversion, you must
+check at least that the Gin input grammar does not contain unitary productions nor empty ones.
+The execution of the program in the command line should look like this:
 
-In different fields of science there is a need to work with very big, or very small  numerical values.
-With this program im implementing data types in C++ to handle 
-very large numeric values, exceeding the representation range of the defined data types
-in standard language. To do this, the generic data type BigInt<size_t Base> is defined
-which represents integers using positional notation. In this numbering system, the value of a digit depends on its relative position and the base, which determines the number of
-digits needed to write any number. By default, the decimal system will be used
-(base 10), although it is also common to use the binary (base 2), octal (base 8) and hexadecimal (base 16).
+```
+./Grammar2CNF input.gra output.gra
+```
 
-The representation range of the BigInt<size_t Base> data type encompasses any integer, positive or negative, that can be stored in machine memory.
-That is, the maximum range is limited by the maximum size that the system allows for the data structure where the digits are stored.
+As my other project that converts a DFA to a regular grammar (https://github.com/KeflerExe/DFA-To-Regular-Grammar-C-) the format of the output file containing the grammar _is the following:_
 
-Using the BigInt<Base> data type, the program implements a calculator for expressions in inverse Polish notation.
+1. Terminal symbols (alphabet): a line containing N, the number of symbols
+in the alphabet followed by N lines, each of which contains a symbol of the
+alphabet.
+
+2. Set of non-terminal symbols: a line containing V, the number of
+non-terminal symbols, followed by V lines, each of which contains a
+alphanumeric string without spaces.
+
+3. Boot symbol: a single line containing the boot symbol, S, of the
+grammar. It must be one of the non-terminal symbols listed above.
+
+4. Productions: a line containing P, the number of productions of the grammar, followed by P lines each of which contains a production.
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -50,13 +63,12 @@ No installation required :)
 ## Usage
 
 1. Download the files
-2. Compile with g++
+2. Compile with makefile
 ```
-g++ bigint_main.cc bigint_func.cc
+make
 ```
 4. All ready!
 
-(You can find instructions about the arguments of the program inside the bigint_func.cc file.)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
