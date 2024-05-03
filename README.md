@@ -16,7 +16,7 @@ The execution of the program in the command line should look like this:
 ./Grammar2CNF input.gra output.gra
 ```
 
-As my other project that [converts a DFA to a regular grammar](https://github.com/KeflerExe/DFA-To-Regular-Grammar-C-) the format of the output file containing the grammar _is the following:_
+As my other project that [converts a DFA to a regular grammar](https://github.com/KeflerExe/DFA-To-Regular-Grammar-C-) the format of the .gra files containing the grammars _is the following:_
 
 1. Terminal symbols (alphabet): a line containing N, the number of symbols
 in the alphabet followed by N lines, each of which contains a symbol of the
